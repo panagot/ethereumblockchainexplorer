@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Search, Loader2, Moon, Sun, History, TrendingUp, Copy, Download, Share2, ExternalLink, XCircle } from 'lucide-react';
 import { fetchTransactionDetails, fetchTransactionReceipt, fetchRecentTransactions } from '@/lib/ethereumClient';
 import { parseEthereumTransaction } from '@/lib/transactionParser';
@@ -245,7 +245,7 @@ export default function Home() {
                   Ethereum Explorer
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 text-sm">
-                  The Best Ethereum Blockchain Explorer - Easy to Read Transaction Analysis
+                  An Easy to Read Ethereum Blockchain Explorer
                 </p>
               </div>
             </div>
@@ -543,29 +543,34 @@ export default function Home() {
       </div>
 
       {/* Professional Footer */}
-      <footer className="mt-auto bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 border-t border-slate-200 dark:border-slate-700">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <footer className="mt-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200/50 dark:border-slate-700/50 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Features */}
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Features</h4>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Features</h3>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                <li>• Real-time MEV detection & analysis</li>
-                <li>• Interactive transaction flow visualization</li>
+                <li>• Real-time transaction monitoring</li>
+                <li>• MEV detection & analysis</li>
                 <li>• Educational content & explanations</li>
-                <li>• Balance change tracking with USD values</li>
+                <li>• Balance change tracking</li>
               </ul>
             </div>
+            
+            {/* Technology */}
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Technology</h4>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Technology</h3>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li>• Built with Next.js & TypeScript</li>
-                <li>• Ethers.js integration</li>
+                <li>• Ethereum Web3.js integration</li>
+                <li>• EVM transaction parsing</li>
                 <li>• Smart contract analysis</li>
-                <li>• Advanced MEV detection algorithms</li>
               </ul>
             </div>
+            
+            {/* Community */}
             <div>
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Community</h4>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Community</h3>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li>• Open source project</li>
                 <li>• No registration required</li>
@@ -575,18 +580,29 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="border-t border-slate-200 dark:border-slate-700 pt-4">
-            <div className="text-center">
-              <p className="text-slate-600 dark:text-slate-400 text-sm font-medium mb-2">
+          <div className="border-t border-slate-200/50 dark:border-slate-700/50 pt-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 Made with ❤️ for the Ethereum community
               </p>
-              <div className="flex items-center justify-center gap-4 text-xs text-slate-500 dark:text-slate-500">
+              <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-500">
                 <span>© 2024 Ethereum Explorer</span>
                 <span>•</span>
-                <span>The Best Ethereum Blockchain Explorer</span>
+                <span>Grant Submission</span>
                 <span>•</span>
-                <span>Easy to Read Transaction Analysis</span>
+                <span>Easy to Read Blockchain Explorer</span>
               </div>
+              <a 
+                href="https://twitter.com/Panagot" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                title="Follow @Panagot on Twitter"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, ArrowDown, Users, Zap, Coins, Shield, Clock } from 'lucide-react';
+import { Users, Zap, Coins, Shield, Clock } from 'lucide-react';
 import type { EthereumTransactionExplanation } from '@/types/transaction';
 
 interface TransactionFlowProps {

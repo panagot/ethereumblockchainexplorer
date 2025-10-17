@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { AlertTriangle, Shield, TrendingUp, Eye, Clock } from 'lucide-react';
+import { AlertTriangle, Shield, Eye, Clock } from 'lucide-react';
 import type { EthereumTransactionExplanation, MEVAnalysis } from '@/types/transaction';
 
 interface MEVDetectionProps {
@@ -207,7 +207,7 @@ export default function MEVDetection({ transaction }: MEVDetectionProps) {
               {analysis.mevType === 'sandwich' && (
                 <p>
                   This transaction may be part of a sandwich attack, where a trader places transactions before and after 
-                  a victim's transaction to profit from price slippage.
+                  a victim&apos;s transaction to profit from price slippage.
                 </p>
               )}
               {analysis.mevType === 'liquidation' && (
@@ -233,7 +233,7 @@ export default function MEVDetection({ transaction }: MEVDetectionProps) {
             <span className="font-semibold text-slate-900 dark:text-white">Ethereum MEV Protection</span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Ethereum's proof-of-stake consensus and EIP-1559 gas mechanism provide some protection against MEV attacks. 
+            Ethereum&apos;s proof-of-stake consensus and EIP-1559 gas mechanism provide some protection against MEV attacks. 
             Flashbots and other MEV protection services help users avoid frontrunning and sandwich attacks.
           </p>
         </div>
