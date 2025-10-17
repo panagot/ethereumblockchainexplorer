@@ -1,0 +1,4 @@
+# Force Vercel rebuild - Ethereum Explorer
+# Build triggered: 2024-01-17
+# Purpose: Fix deployment showing Aptos content instead of Ethereum content
+# This file forces Vercel to completely rebuild the project
