@@ -24,7 +24,7 @@ export interface EthereumTransactionExplanation {
 export interface FunctionCall {
   function: string;
   signature: string;
-  arguments: any[];
+  arguments: unknown[];
   protocol: string;
   description: string;
 }

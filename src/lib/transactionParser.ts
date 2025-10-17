@@ -27,7 +27,7 @@ export interface EthereumTransactionExplanation {
 export interface FunctionCall {
   function: string;
   signature: string;
-  arguments: any[];
+  arguments: unknown[];
   protocol: string;
   description: string;
 }
@@ -122,7 +122,7 @@ export function parseEthereumTransaction(
 
 function parseFunctionCalls(
   transaction: ethers.TransactionResponse,
-  receipt: ethers.TransactionReceipt
+  _receipt: ethers.TransactionReceipt
 ): FunctionCall[] {
   const calls: FunctionCall[] = [];
   
@@ -227,8 +227,8 @@ function parseBalanceChanges(
 
 function determineTransactionType(
   transaction: ethers.TransactionResponse,
-  receipt: ethers.TransactionReceipt,
-  functionCalls: FunctionCall[]
+  _receipt: ethers.TransactionReceipt,
+  _functionCalls: FunctionCall[]
 ): string {
   // ETH transfer
   if (transaction.data === '0x' && transaction.value > 0) {
@@ -293,8 +293,8 @@ function generateSummary(
 
 function generateEducationalContent(
   transactionType: string,
-  functionCalls: FunctionCall[],
-  tokenTransfers: TokenTransfer[]
+  _functionCalls: FunctionCall[],
+  _tokenTransfers: TokenTransfer[]
 ): string[] {
   const content: string[] = [];
   

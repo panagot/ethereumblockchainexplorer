@@ -2,6 +2,7 @@
   "name": "ethereum-transaction-explorer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "An Easy to Read Ethereum Blockchain Explorer - Professional Transaction Analysis with MEV Detection and Educational Content",
   "scripts": {
     "dev": "next dev --turbopack",
