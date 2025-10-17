@@ -253,7 +253,7 @@ function determineTransactionType(
     }
     
     // Check for NFT transfers
-    if (receipt.logs.some(log => 
+    if (_receipt.logs.some(log => 
       log.topics[0] === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
     )) {
       return 'NFT_TRANSFER';
