@@ -122,7 +122,7 @@ export async function fetchRecentTransactions(limit: number = 10): Promise<strin
     for (let i = 0; i < limit && i < 5; i++) {
       const block = await provider.getBlock(latestBlock - i, true);
       if (block && block.transactions) {
-        const txHashes = block.transactions.slice(0, 2).map(tx => 
+        const txHashes = block.transactions.slice(0, 2).map((tx: string | ethers.TransactionResponse) => 
           typeof tx === 'string' ? tx : tx.hash
         );
         transactions.push(...txHashes);
