@@ -101,7 +101,7 @@ export function parseEthereumTransaction(
     hash,
     success,
     summary,
-    timestamp: transaction.timestamp || Date.now(),
+    timestamp: Date.now(), // Will be updated with block timestamp if available
     blockNumber: receipt.blockNumber,
     gasUsed,
     gasPrice,
