@@ -62,10 +62,9 @@ export const PROTOCOL_MAPPINGS: { [key: string]: string } = {
 // Popular Ethereum tokens
 export const POPULAR_TOKENS: { [key: string]: { name: string; symbol: string; decimals: number; logo?: string } } = {
   '0x0000000000000000000000000000000000000000': { name: 'Ethereum', symbol: 'ETH', decimals: 18 },
-  '0xA0b86a33E6441b8c4C8C0e4b8b2c4C8C0e4b8b2c': { name: 'Dai Stablecoin', symbol: 'DAI', decimals: 18 },
   '0x6B175474E89094C44Da98b954EedeAC495271d0F': { name: 'Dai Stablecoin', symbol: 'DAI', decimals: 18 },
   '0xA0b86a33E6441b8c4C8C0e4b8b2c4C8C0e4b8b2c': { name: 'USD Coin', symbol: 'USDC', decimals: 6 },
-  '0xA0b86a33E6441b8c4C8C0e4b8b2c4C8C0e4b8b2c': { name: 'Tether USD', symbol: 'USDT', decimals: 6 },
+  '0xdAC17F958D2ee523a2206206994597C13D831ec7': { name: 'Tether USD', symbol: 'USDT', decimals: 6 },
   '0x514910771AF9Ca656af840dff83E8264EcF986CA': { name: 'Chainlink', symbol: 'LINK', decimals: 18 },
   '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599': { name: 'Wrapped Bitcoin', symbol: 'WBTC', decimals: 8 },
   '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984': { name: 'Uniswap', symbol: 'UNI', decimals: 18 },
