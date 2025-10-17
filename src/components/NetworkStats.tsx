@@ -38,7 +38,7 @@ export default function NetworkStats() {
     
     // Update stats every 30 seconds
     const interval = setInterval(fetchStats, 30000);
-    return () => setInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   const getHealthColor = (health: string) => {
